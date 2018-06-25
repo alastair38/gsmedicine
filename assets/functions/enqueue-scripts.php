@@ -36,7 +36,7 @@ function site_scripts() {
     wp_enqueue_style( 'cookie-css', '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css', array(), '', 'all' );
 
     // Register main stylesheet
-    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all' );
+    wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/main.css', array(), '', 'all' );
 
     // Deregister admin stylesheet so that it doesn't load on the front-end form
 

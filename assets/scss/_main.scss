@@ -396,10 +396,35 @@ POSTS & CONTENT STYLES
   }
 }
 
-#About, #Teaching, #Classes {
+#About {
   margin-bottom: 0px !important;
   padding: 2rem 0;
   opacity: 0;
+  p {
+    font-size: 1.85rem;
+    font-weight: 200;
+    @media #{$small-and-down} {
+      font-size: 1.25em;
+    }
+
+  }
+  img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 2.28rem;
+  }
+  .btn-large {
+    margin-top: 2rem;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+#Publications, #Projects {
+  margin-bottom: 0px !important;
+  padding: 2rem 0;
+  opacity: 1;
   p {
     font-size: 1.85rem;
     font-weight: 200;
