@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Teaching
+Template Name: About
 */
 
 get_header(); ?>

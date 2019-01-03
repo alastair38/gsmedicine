@@ -1,6 +1,6 @@
 
 
-	<div class="center white-text">
+	<div class="center">
 			<i class="mdi mdi-clock"></i> Posted on <?php the_time('F j, Y');?>
 
 	</div>

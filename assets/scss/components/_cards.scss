@@ -25,7 +25,7 @@
     @media #{$small-and-down} {
       font-size: 1.25rem;
       line-height: 1.5rem !important;
-      
+
     }
     &.activator {
       cursor: pointer;
@@ -112,6 +112,7 @@
   .card-action {
     border-top: 1px solid rgba(160,160,160,.2);
     padding: $card-padding;
+    margin-top: 1rem;
 
     a:not(.btn):not(.btn-large):not(.btn-floating) {
       color: $card-link-color;
@@ -140,4 +141,8 @@
     }
 
   }
+}
+
+.page-template-page-teaching-materials .card {
+  height: 250px;
 }

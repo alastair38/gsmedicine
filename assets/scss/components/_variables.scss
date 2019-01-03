@@ -3,7 +3,7 @@ $primary-color: color("shades", "white") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
+$secondary-color: color("grey", "darken-2") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("teal", "darken-1") !default;
@@ -38,7 +38,7 @@ $button-line-height: 36px !default;
 /*** Cards ***/
 $card-padding: 20px !default;
 $card-bg-color: #fff !default;
-$card-link-color: color("red", "lighten-2") !default;
+$card-link-color: color("yellow", "base") !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
 
 /*** Collapsible ***/

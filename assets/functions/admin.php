@@ -34,37 +34,29 @@ http://digwp.com/2010/10/customize-wordpress-dashboard/
  *
  * This function is hooked into the 'wp_dashboard_setup' action below.
  */
-function welcome_dashboard_widgets() {
 
-	wp_add_dashboard_widget(
-                 'welcome_dashboard_widget',         // Widget slug.
-                 'Getting Started',         // Title.
-                 'welcome_dashboard_widget_function' // Display function.
-        );
-}
-add_action( 'wp_dashboard_setup', 'welcome_dashboard_widgets' );
 
 /**
  * Create the function to output the contents of our Dashboard Widget.
  */
-function welcome_dashboard_widget_function() {
-			$blog_name = get_bloginfo('name');
-			echo
-			'<div class="welcome-panel">
-				<h1>Welcome to the ' . $blog_name . ' website</h1>
-				<p class="about-description">Here are some links to get you started.</p>
-					<a class="button button-primary button-hero" href="' . admin_url() . '?page=academy-details" target="_blank">Start by filling in your business details</a>
-				</p>
-				<div class="welcome-panel-column">
-					<h3>Next Steps</h3>
-					<ul>
-						<li>
-							<a class="welcome-icon welcome-add-page" href="' . admin_url() . 'post-new.php">Add some news</a>
-						</li>
-					</ul>
-				</div>
-			</div>';
-}
+// function welcome_dashboard_widget_function() {
+// 			$blog_name = get_bloginfo('name');
+// 			echo
+// 			'<div class="welcome-panel">
+// 				<h1>Welcome to the ' . $blog_name . ' website</h1>
+// 				<p class="about-description">Here are some links to get you started.</p>
+// 					<a class="button button-primary button-hero" href="' . admin_url() . '?page=academy-details" target="_blank">Start by filling in your business details</a>
+// 				</p>
+// 				<div class="welcome-panel-column">
+// 					<h3>Next Steps</h3>
+// 					<ul>
+// 						<li>
+// 							<a class="welcome-icon welcome-add-page" href="' . admin_url() . 'post-new.php">Add some news</a>
+// 						</li>
+// 					</ul>
+// 				</div>
+// 			</div>';
+// }
 
 // Calling all custom dashboard widgets
 function charly_custom_dashboard_widgets() {
@@ -143,9 +135,9 @@ add_filter('acf/settings/google_api_key', function () {
 
 if (function_exists('acf_add_options_page')) {
   acf_add_options_page(array(
-    'page_title' => 'Academy Details',
-    'menu_title' => 'Academy Details',
-    'menu_slug'  => 'academy-details',
+    'page_title' => 'Organisation Details',
+    'menu_title' => 'Organisation Details',
+    'menu_slug'  => 'organisation-details',
     'capability' => 'edit_posts',
     'redirect'   => false
   ));

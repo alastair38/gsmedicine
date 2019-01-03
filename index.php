@@ -9,18 +9,19 @@ $post_thumbnail_id = get_post_thumbnail_id( $page_id );
 <main class="cotainer">
 
 		<div class="row" role="main">
+
 			<div class="bg parallax-container" >
 				<header class="article-header">
-					<h1 class="entry-title single-title white-text center" style="padding: 8rem 0 4rem 0;" itemprop="headline"><?php single_post_title();?></h1>
+					<h1 class="entry-title single-title white-text center" itemprop="headline"><?php single_post_title();?></h1>
 				</header> <!-- end article header -->
-				 <div class="parallax"><img src="<?php echo get_the_post_thumbnail_url($page_id, 'large'); ?>">
+				 <div class="parallax"><img src="<?php the_post_thumbnail_url('large'); ?>"></div>
 			</div>
-		</div>
+
 		    <div class="section">
 					<div class="container">
 
 
-
+					<ul class="collection" style="border: none;">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<!-- To see additional archive styles, visit the /parts directory -->
@@ -35,6 +36,7 @@ $post_thumbnail_id = get_post_thumbnail_id( $page_id );
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 
 				<?php endif; ?>
+			</ul>
 			</div>
 </div>
 

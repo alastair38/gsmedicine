@@ -3,7 +3,11 @@
 <article id="post-<?php the_ID(); ?>" class="<?php echo $post->post_name;?>" role="article" itemscope itemtype="http://schema.org/WebPage">
 
 		<header class="article-header">
-			<h1 class="entry-title single-title center" itemprop="headline"><?php the_title();?></h1>
+			<h1 class="entry-title single-title" itemprop="headline">
+				<span class="wrap">
+					<span class="inner"><?php the_title(); ?></span>
+				</span>
+			</h1>
 		</header> <!-- end article header -->
 
 

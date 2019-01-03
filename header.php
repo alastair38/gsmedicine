@@ -40,7 +40,7 @@
 	<!-- Uncomment this line if using the Off-Canvas Menu -->
 <?php if (is_front_page()) {
   ?>
-  <body <?php body_class(''); ?> style="background: url('<?php the_post_thumbnail_url('full'); ?>') rgba(38,38,38,.65) no-repeat center top;">
+  <body <?php body_class(''); ?> style="background: url('<?php the_post_thumbnail_url('full'); ?>') rgba(38,38,38,.65) no-repeat center center; background-size: 125%;">
 <?php } else {?>
   <body <?php body_class('white'); ?>>
 <?php }?>

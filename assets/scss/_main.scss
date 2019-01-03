@@ -130,6 +130,7 @@ ul.share-links.columns {
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	// Removing text decoration from all headline links
 	a {
@@ -193,7 +194,7 @@ h5, .h5 {
 
 .home {
   h1 {
-    font-size: 4.5rem;
+    font-size: 6rem;
     @media #{$medium-and-down} {
       font-size: 2em;
     }
@@ -205,13 +206,22 @@ h5, .h5 {
   }
 }
 
+.wrap {
+	box-shadow: 0px 0 0 10px #191919, 10px 0 0 10px #191919;
+}
+.inner {
+	background: #191919;
+	position:relative;
+}
+
 /*********************
 HEADER STYLES
 *********************/
 .header {
   a.brand-logo.thin.left {
     color: $secondary-color;
-    font-weight: 300;
+    font-weight: 600;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
     padding-left: 1rem;
     &:hover, &:focus {
       color: color("grey", "darken-4");
@@ -401,8 +411,8 @@ POSTS & CONTENT STYLES
   padding: 2rem 0;
   opacity: 0;
   p {
-    font-size: 1.85rem;
-    font-weight: 200;
+    font-size: 1.5rem;
+    font-weight: 300;
     @media #{$small-and-down} {
       font-size: 1.25em;
     }
@@ -410,9 +420,10 @@ POSTS & CONTENT STYLES
   }
   img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin-top: 2.28rem;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
   }
   .btn-large {
     margin-top: 2rem;
@@ -421,23 +432,23 @@ POSTS & CONTENT STYLES
   }
 }
 
-#Publications, #Projects {
+.fp-page-section {
   margin-bottom: 0px !important;
   padding: 2rem 0;
   opacity: 1;
   p {
-    font-size: 1.85rem;
-    font-weight: 200;
+    font-size: 1.5rem;
+    font-weight: 300;
     @media #{$small-and-down} {
       font-size: 1.25em;
     }
-
   }
   img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin-top: 2.28rem;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
   }
   .btn-large {
     margin-top: 2rem;
@@ -619,6 +630,10 @@ h6.card-sub-title {
   cursor: help;
 }
 
+.mdi-domain {
+  padding: 5px;
+  border-radius: 50%;
+}
 
 
 // Post meta
@@ -690,7 +705,6 @@ h6.card-sub-title {
 }
 
 body.home {
-  background-size: cover !important;
   background-attachment: fixed !important;
   @media #{$medium-only} {
     background-size: 200% auto !important;
@@ -705,7 +719,7 @@ body.home {
 #gettingStarted {
   padding: 5em 0em 0em 0em;
   margin-bottom: 0em;
-  background: rgba(38,38,38,.65);
+  background: rgba(38,38,38,.35);
   aside {
     padding: 1em 2em;
   }
@@ -804,6 +818,10 @@ body.home {
 		clear: both;
 	}
 
+  .university_link {
+    padding: 0.5rem 0;
+  }
+
 	video, object {
 		max-width: 100%;
 		height: auto;
@@ -856,9 +874,9 @@ img.hide-on-med-and-up {
 }
 
 .parallax-container {
-  height: 400px;
+  height: 300px;
   margin-bottom: 2rem;
-  background: rgba(0,0,0, .5);
+  background: rgba(70, 70, 70, 0.5);
   h1 {
     padding: 8rem 0 4rem 0;
   }

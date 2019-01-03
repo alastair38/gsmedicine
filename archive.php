@@ -11,12 +11,12 @@ $title = single_cat_title("", false);
 		    <div class="col s12">
 
 					<header>
-						<h1 class="page-title center"><?php single_cat_title("Contributions by ", true);?></h1>
+						<h1 class="page-title center"><?php the_archive_title();?></h1>
 					</header>
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'blog' ); ?>
+					<?php get_template_part( 'parts/loop', 'archive' ); ?>
 
 				<?php endwhile; ?>
 
