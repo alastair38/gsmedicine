@@ -64,7 +64,9 @@
 		<?php
 
 		endwhile; // end item_details loop
-		}; // end item_details conditional ?>
+	} else {
+		get_template_part( 'parts/content', 'missing' );
+	}; // end item_details conditional ?>
 
 	</div> <!-- end row container -->
 </div> <!-- end section -->

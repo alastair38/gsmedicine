@@ -2,6 +2,7 @@
 global $wp_query;
 $page_id = $wp_query->get_queried_object_id();
 $post_thumbnail_id = get_post_thumbnail_id( $page_id );
+$featured_img_url = get_the_post_thumbnail_url($page_id,'full');
 ?>
 
 
@@ -14,7 +15,7 @@ $post_thumbnail_id = get_post_thumbnail_id( $page_id );
 				<header class="article-header">
 					<h1 class="entry-title single-title white-text center" itemprop="headline"><?php single_post_title();?></h1>
 				</header> <!-- end article header -->
-				 <div class="parallax"><img src="<?php the_post_thumbnail_url('large'); ?>"></div>
+				 <div class="parallax"><img src="<?php echo $featured_img_url; ?>"></div>
 			</div>
 
 		    <div class="section">

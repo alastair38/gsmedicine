@@ -72,10 +72,12 @@ if($network){
 
 
 					</p>
+					<?php if($row['member_bio']) {?>
 					<p>
 
 						<?php echo $row['member_bio'];?>
 					</p>
+				<?php }?>
 
 				</div>
 
@@ -110,11 +112,12 @@ if($network){
 
 
 					</p>
+					<?php if($row['member_bio']) {?>
 					<p>
 
 						<?php echo $row['member_bio'];?>
 					</p>
-
+				<?php }?>
 				</div>
 
 			</div>
