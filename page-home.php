@@ -12,7 +12,7 @@ get_header();
 
 		<?php get_template_part( 'parts/loop', 'page-home' ); ?>
 		<div class="col s12 center">
-			<a href="#About" class="white-text"><i class="mdi mdi-chevron-down" style="font-size: 8rem;"></i></a>
+			<a href="#About" class="white-text"><i class="mdi mdi-chevron-down"></i></a>
 		</div>
 
 		</div> <!-- end #strapline -->
@@ -24,7 +24,7 @@ get_header();
 
 		while ( have_rows('front_page_sections') ) : the_row();?>
 
-	<div id="<?php the_sub_field('section_title'); ?>" class="row fp-page-section" style="background: <?php the_sub_field('background_colour'); ?>; padding: 4rem 2rem;">
+	<div id="<?php the_sub_field('section_title'); ?>" class="row fp-page-section" style="background: <?php the_sub_field('background_colour'); ?>;">
 
 		<div class="col s12 l8 push-l<?php the_sub_field('push_right'); ?>" style="color: <?php the_sub_field('text_colour'); ?>;">
 			<h4 class="center"><?php the_sub_field('section_title'); ?></h4>

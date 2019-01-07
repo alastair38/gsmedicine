@@ -426,9 +426,13 @@ POSTS & CONTENT STYLES
   }
 }
 
+.mdi-chevron-down {
+  font-size: 8rem;
+}
+
 .fp-page-section {
   margin-bottom: 0px !important;
-  padding: 2rem 0;
+  padding: 4rem 2rem;
   opacity: 1;
   p {
     font-size: 1.5rem;
@@ -714,14 +718,12 @@ h6.card-sub-title {
 
 body.home {
   background-attachment: fixed !important;
-  // @media #{$medium-only} {
-  //   background-size: 200% auto !important;
-  //   background-attachment: scroll !important;
-  // }
-  // @media #{$small-and-down} {
-  //   background-size: 350% auto !important;
-  //   background-attachment: scroll !important;
-  // }
+  @media #{$medium-only} {
+    background-size: 200% auto !important;
+  }
+  @media #{$small-and-down} {
+    background-size: 250% auto !important;
+  }
 }
 
 #gettingStarted {
