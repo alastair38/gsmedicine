@@ -406,25 +406,6 @@ POSTS & CONTENT STYLES
   }
 }
 
-#About {
-  margin-bottom: 0px !important;
-  padding: 2rem 0;
-  opacity: 0;
-  p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    @media #{$small-and-down} {
-      font-size: 1.25em;
-    }
-
-  }
-
-  .btn-large {
-    margin-top: 2rem;
-    border-width: 1px;
-    border-style: solid;
-  }
-}
 
 .mdi-chevron-down {
   font-size: 8rem;
@@ -565,6 +546,10 @@ color: color("grey", "base");
 
 #strapline {
   height: 75vh;
+  @media #{$small-and-down} {
+    height: auto;
+
+  }
 }
 
 
@@ -722,7 +707,15 @@ body.home {
     background-size: 200% auto !important;
   }
   @media #{$small-and-down} {
-    background-size: 250% auto !important;
+    background-size: 275% auto !important;
+    background-position: center top !important;
+
+  }
+}
+
+#hero {
+  .row {
+    margin-bottom: 0;
   }
 }
 
@@ -900,6 +893,21 @@ img.hide-on-med-and-up {
   }
   @media #{$medium-and-down} {
     height: 300px;
+  }
+}
+
+.home .parallax-container {
+  height: calc(100vh - 64px);
+  background: rgba(70, 70, 70, 0.5);
+  margin-bottom: 0;
+  h1 {
+    padding: 0.5rem 1rem;
+  }
+  @media #{$medium-and-down} {
+    height: 300px;
+  }
+  @media #{$large-and-up} {
+    padding-top: 5rem;
   }
 }
 

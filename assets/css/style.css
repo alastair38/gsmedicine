@@ -10889,21 +10889,6 @@ POSTS & CONTENT STYLES
       border-radius: 0px;
       bottom: 0; } }
 
-#About {
-  margin-bottom: 0px !important;
-  padding: 2rem 0;
-  opacity: 0; }
-  #About p {
-    font-size: 1.5rem;
-    font-weight: 300; }
-    @media only screen and (max-width: 600px) {
-      #About p {
-        font-size: 1.25em; } }
-  #About .btn-large {
-    margin-top: 2rem;
-    border-width: 1px;
-    border-style: solid; }
-
 .mdi-chevron-down {
   font-size: 8rem; }
 
@@ -11018,6 +11003,9 @@ input.wpas-submit.btn, input.wpas-submit.btn-large {
 
 #strapline {
   height: 75vh; }
+  @media only screen and (max-width: 600px) {
+    #strapline {
+      height: auto; } }
 
 footer.card-content {
   border-top: 1px solid rgba(160, 160, 160, 0.2); }
@@ -11108,7 +11096,11 @@ body.home {
       background-size: 200% auto !important; } }
   @media only screen and (max-width: 600px) {
     body.home {
-      background-size: 250% auto !important; } }
+      background-size: 275% auto !important;
+      background-position: center top !important; } }
+
+#hero .row {
+  margin-bottom: 0; }
 
 #gettingStarted {
   padding: 5em 0em 0em 0em;
@@ -11241,6 +11233,19 @@ img.hide-on-med-and-up {
   @media only screen and (max-width: 992px) {
     .parallax-container {
       height: 300px; } }
+
+.home .parallax-container {
+  height: calc(100vh - 64px);
+  background: rgba(70, 70, 70, 0.5);
+  margin-bottom: 0; }
+  .home .parallax-container h1 {
+    padding: 0.5rem 1rem; }
+  @media only screen and (max-width: 992px) {
+    .home .parallax-container {
+      height: 300px; } }
+  @media only screen and (min-width: 993px) {
+    .home .parallax-container {
+      padding-top: 5rem; } }
 
 .page-template-page-about h1 {
   position: absolute;
