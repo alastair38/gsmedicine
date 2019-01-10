@@ -16,6 +16,8 @@ $featured_img_url = get_the_post_thumbnail_url($page_id,'full');
 					<h1 class="entry-title single-title white-text center" itemprop="headline"><?php single_post_title();?></h1>
 				</header> <!-- end article header -->
 				 <div class="parallax"><img src="<?php echo $featured_img_url; ?>"></div>
+				 <?php get_template_part( 'parts/content', 'licence' );?>
+
 			</div>
 
 		    <div class="section">
