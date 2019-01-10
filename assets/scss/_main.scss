@@ -896,13 +896,35 @@ img.hide-on-med-and-up {
   }
 }
 
+#cc-licence {
+  display: none;
+    &.cc-open {
+    display:block;
+    text-align: left;
+    max-width: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    padding: 1rem;
+    border-radius: 3px;
+    }
+
+}
+
+#cc-button {
+position: absolute;
+bottom: 20px;
+right: 0;
+}
+
 .home .parallax-container {
-  height: calc(100vh - 64px);
-  background: rgba(70, 70, 70, 0.5);
+  height: calc(100vh - 100px);
   margin-bottom: 0;
+  background: transparent;
   h1 {
     padding: 0.5rem 1rem;
   }
+
   @media #{$medium-and-down} {
     height: 300px;
   }

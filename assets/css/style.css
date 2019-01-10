@@ -11234,10 +11234,27 @@ img.hide-on-med-and-up {
     .parallax-container {
       height: 300px; } }
 
+#cc-licence {
+  display: none; }
+  #cc-licence.cc-open {
+    display: block;
+    text-align: left;
+    max-width: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    padding: 1rem;
+    border-radius: 3px; }
+
+#cc-button {
+  position: absolute;
+  bottom: 20px;
+  right: 0; }
+
 .home .parallax-container {
-  height: calc(100vh - 64px);
-  background: rgba(70, 70, 70, 0.5);
-  margin-bottom: 0; }
+  height: calc(100vh - 100px);
+  margin-bottom: 0;
+  background: transparent; }
   .home .parallax-container h1 {
     padding: 0.5rem 1rem; }
   @media only screen and (max-width: 992px) {

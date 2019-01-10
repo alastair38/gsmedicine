@@ -1,0 +1,155 @@
+{
+    "key": "group_5c376a2734f62",
+    "title": "Licence Details",
+    "fields": [
+        {
+            "key": "field_5c3783dcbc6d9",
+            "label": "Add Licence Details",
+            "name": "add_licence_details",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c376a46e2653",
+            "label": "Type of Licence",
+            "name": "type_of_licence",
+            "type": "select",
+            "instructions": "Choose the type of licence this image is used under (eg: Creative Commons ...)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c3783dcbc6d9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "https:\/\/creativecommons.org\/licenses\/by\/4.0\/": "CC BY",
+                "https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/": "CC BY-SA",
+                "https:\/\/creativecommons.org\/licenses\/by-nd\/4.0\/": "CC BY-ND"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c376c48e2655",
+            "label": "Caption Text",
+            "name": "caption_text",
+            "type": "textarea",
+            "instructions": "Add a caption describing the image being used",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c3783dcbc6d9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5c376b42e2654",
+            "label": "Credit",
+            "name": "credit_text",
+            "type": "text",
+            "instructions": "Add the name of any person or institution to credit",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c3783dcbc6d9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c376c78e2656",
+            "label": "Credit Link",
+            "name": "credit_link",
+            "type": "url",
+            "instructions": "If relevant, add a link to the website of the credited person or institution",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c3783dcbc6d9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "attachment",
+                "operator": "==",
+                "value": "image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547144791
+}

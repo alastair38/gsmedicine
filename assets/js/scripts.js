@@ -16,6 +16,14 @@ jQuery(document).ready(function() {
   }
 );
 
+$( "#cc-button" ).click(function() {
+$( "#cc-licence" ).toggleClass( "cc-open" )
+
+});
+
+$( "#cc-close" ).click(function() {
+$( "#cc-licence" ).toggleClass( "cc-open" )
+});
 
     $('.materialboxed').materialbox();
     $('.modal').modal({
