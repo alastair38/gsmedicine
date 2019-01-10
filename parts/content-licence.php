@@ -1,5 +1,7 @@
-<?php $post_thumbnail_id = get_post_thumbnail_id( );
- $image_meta = wp_get_attachment_caption( $post_thumbnail_id );
+<?php
+
+$post_thumbnail_id = get_post_thumbnail_id( );
+
 
  if( get_field('add_licence_details', $post_thumbnail_id) ):
 $caption = get_field('caption_text', $post_thumbnail_id);
