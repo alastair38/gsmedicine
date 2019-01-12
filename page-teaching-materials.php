@@ -5,6 +5,7 @@ Template Name: Teaching Materials
 get_header(); ?>
 
 <main>
+
 	<div class="row" role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post();
@@ -16,6 +17,7 @@ get_header(); ?>
 		?>
 
 	</div> <!-- end row -->
+	
 </main> <!-- end main -->
 
 <?php get_footer(); ?>

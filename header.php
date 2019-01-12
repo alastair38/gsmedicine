@@ -55,19 +55,10 @@
 
 	</header> <!-- end .header -->
 
-  <!--[if IE 8]>
-<div style="padding: 10%; font-size: 2em; font-family: Helvetica; background: tomato; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10000; height: 100%;">
-This website does not work in versions of Internet Explorer less than IE9.  As IE8 and below are no longer supported by Microsoft, we strongly recommend you update your browser to a more secure and modern alternative such as Google Chrome or Mozilla Firefox. Not only will this make your experience of using the Internet a faster and more pleasurable experience, it will also expose you to significantly fewer risks than continuing to use IE8.
-
-
-</div>
-
-    <![endif]-->
-    <!--[if IE 7]>
-  <div style="padding: 10%; font-size: 2em; font-family: Helvetica; background: tomato; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10000; height: 100%;">
-  This website does not work in versions of Internet Explorer less than IE9.  As IE8 and below are no longer supported by Microsoft, we strongly recommend you update your browser to a more secure and modern alternative such as Google Chrome or Mozilla Firefox. Not only will this make your experience of using the Internet a faster and more pleasurable experience, it will also expose you to significantly fewer risks than continuing to use IE8.
-
-
-  </div>
-
-      <![endif]-->
+  <!--[if lt IE 9]>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+ <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+ <![endif]-->

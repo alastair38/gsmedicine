@@ -2369,7 +2369,6 @@ td, th {
       border-right: 1px solid #d0d0d0; } }
 .collection {
   margin: 0.83333rem 0 1.66667rem 0;
-  border: 1px solid #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
   position: relative; }
@@ -2377,8 +2376,11 @@ td, th {
     background-color: #fff;
     line-height: 1.5rem;
     padding: 10px 20px;
-    margin: 0;
-    border-bottom: 1px solid #e0e0e0; }
+    margin: 0; }
+    .collection .collection-item h2 {
+      margin-top: 1rem; }
+    .collection .collection-item label {
+      padding: 0 0 1rem 0; }
     .collection .collection-item.avatar {
       min-height: 84px;
       padding-left: 72px;
