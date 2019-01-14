@@ -28,16 +28,7 @@
 
 			<ul id="slide-out" class="side-nav">
 	 			<li class="center">
-	 				<img id="mobilelogo"
-	 				<?php
-	 				$logo_image = get_theme_mod( 'tcx_logo_image' );
-	 				if ($logo_image){?>
-	 				src="<?php echo $logo_image;?>" alt="<?php bloginfo('name'); ?> logo"
-	 				<?php
-	 				} else {?>
-	 				src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt=""
-	 				<?php }?>
-	 				/>
+	 				<strong><?php bloginfo('name'); ?></strong>
 	      </li>
 
 				<?php if(is_front_page()){?>

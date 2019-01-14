@@ -11247,6 +11247,9 @@ img.hide-on-med-and-up {
     right: 60px;
     padding: 1rem;
     border-radius: 3px; }
+    @media only screen and (max-width: 600px) {
+      #cc-licence.cc-open {
+        max-width: 80%; } }
 
 #cc-button {
   position: absolute;

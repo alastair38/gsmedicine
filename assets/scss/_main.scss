@@ -907,6 +907,9 @@ img.hide-on-med-and-up {
     right: 60px;
     padding: 1rem;
     border-radius: 3px;
+    @media #{$small-and-down} {
+      max-width: 80%;
+    }
     }
 
 }
