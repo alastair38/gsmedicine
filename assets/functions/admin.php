@@ -265,3 +265,10 @@ function my_admin_style() {
     }
   </style>';
 }
+
+function custom_loginlogo() {
+echo '<style type="text/css">
+h1 a {background-image: url('.get_template_directory_uri().'/assets/images/login-logo.png) !important; }
+</style>';
+}
+add_action('login_head', 'custom_loginlogo');

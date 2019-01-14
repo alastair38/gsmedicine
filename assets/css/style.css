@@ -3605,23 +3605,68 @@ button.btn-floating {
   bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
-  z-index: 998; }
+  z-index: 997; }
   .fixed-action-btn.active ul {
     visibility: visible; }
-  .fixed-action-btn.horizontal {
+  .fixed-action-btn.direction-left, .fixed-action-btn.direction-right {
     padding: 0 0 0 15px; }
-    .fixed-action-btn.horizontal ul {
+    .fixed-action-btn.direction-left ul, .fixed-action-btn.direction-right ul {
       text-align: right;
       right: 64px;
       top: 50%;
       transform: translateY(-50%);
       height: 100%;
-      left: initial;
-      width: 500px;
-      /*width 100% only goes to width of button container */ }
-      .fixed-action-btn.horizontal ul li {
+      left: auto;
+      /*width 100% only goes to width of button container */
+      width: 500px; }
+      .fixed-action-btn.direction-left ul li, .fixed-action-btn.direction-right ul li {
         display: inline-block;
-        margin: 15px 15px 0 0; }
+        margin: 7.5px 15px 0 0; }
+  .fixed-action-btn.direction-right {
+    padding: 0 15px 0 0; }
+    .fixed-action-btn.direction-right ul {
+      text-align: left;
+      direction: rtl;
+      left: 64px;
+      right: auto; }
+      .fixed-action-btn.direction-right ul li {
+        margin: 7.5px 0 0 15px; }
+  .fixed-action-btn.direction-bottom {
+    padding: 0 0 15px 0; }
+    .fixed-action-btn.direction-bottom ul {
+      top: 64px;
+      bottom: auto;
+      display: flex;
+      flex-direction: column-reverse; }
+      .fixed-action-btn.direction-bottom ul li {
+        margin: 15px 0 0 0; }
+  .fixed-action-btn.toolbar {
+    padding: 0; }
+    .fixed-action-btn.toolbar.active > a i {
+      opacity: 0; }
+    .fixed-action-btn.toolbar ul {
+      display: flex;
+      top: 0;
+      bottom: 0;
+      z-index: 1; }
+      .fixed-action-btn.toolbar ul li {
+        flex: 1;
+        display: inline-block;
+        margin: 0;
+        transition: none; }
+        .fixed-action-btn.toolbar ul li a {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          box-shadow: none;
+          color: #fff;
+          line-height: 64px;
+          z-index: 1; }
+          .fixed-action-btn.toolbar ul li a i {
+            line-height: inherit; }
   .fixed-action-btn ul {
     left: 0;
     right: 0;
@@ -3634,6 +3679,16 @@ button.btn-floating {
       margin-bottom: 15px; }
     .fixed-action-btn ul a.btn-floating {
       opacity: 0; }
+  .fixed-action-btn .fab-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    border-radius: 0px;
+    transform: scale(0); }
 
 .btn-flat {
   box-shadow: none;
@@ -11088,9 +11143,6 @@ h6.card-sub-title {
   margin-bottom: 2em;
   border-bottom: 4px solid #FFFFFF; }
 
-.fixed-action-btn {
-  opacity: 0; }
-
 body.home {
   background-attachment: fixed !important; }
   @media only screen and (min-width: 601px) and (max-width: 992px) {
@@ -11273,6 +11325,9 @@ img.hide-on-med-and-up {
   position: absolute;
   width: 100%;
   padding: 8rem 0 4rem 0; }
+
+.login-page {
+  margin-top: 4rem; }
 
 .chip {
   margin-right: .5rem;

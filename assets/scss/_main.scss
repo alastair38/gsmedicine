@@ -697,9 +697,7 @@ h6.card-sub-title {
 }
 
 // Home page
-.fixed-action-btn {
-  opacity: 0;
-}
+
 
 body.home {
   background-attachment: fixed !important;
@@ -943,6 +941,10 @@ right: 0;
     padding: 8rem 0 4rem 0;
 
   }
+}
+
+.login-page {
+    margin-top: 4rem;
 }
 
 .chip {

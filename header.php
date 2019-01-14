@@ -53,7 +53,11 @@
 
 		<?php get_template_part( 'parts/nav', 'topbar' ); ?>
 
+    <?php get_template_part( 'parts/nav', 'user' ); ?>
+
+
 	</header> <!-- end .header -->
+
 
   <!--[if lt IE 9]>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

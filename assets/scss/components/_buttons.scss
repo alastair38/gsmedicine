@@ -105,10 +105,13 @@ button.btn-floating {
 .fixed-action-btn {
   &.active {
     ul {
-     visibility: visible;
+      visibility: visible;
     }
   }
-  &.horizontal {
+
+  // Directions
+  &.direction-left,
+  &.direction-right {
     padding: 0 0 0 15px;
     ul {
       text-align: right;
@@ -116,12 +119,71 @@ button.btn-floating {
       top: 50%;
       transform: translateY(-50%);
       height: 100%;
-      left: initial;
-      width: 500px; /*width 100% only goes to width of button container */
-
+      left: auto;
+      /*width 100% only goes to width of button container */
+      width: 500px;
       li {
         display: inline-block;
-        margin: 15px 15px 0 0;
+        margin: 7.5px 15px 0 0;
+      }
+    }
+  }
+  &.direction-right {
+    padding: 0 15px 0 0;
+    ul {
+      text-align: left;
+      direction: rtl;
+      left: 64px;
+      right: auto;
+      li {
+        margin: 7.5px 0 0 15px;
+      }
+    }
+  }
+  &.direction-bottom {
+    padding: 0 0 15px 0;
+    ul {
+      top: 64px;
+      bottom: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      li {
+        margin: 15px 0 0 0;
+      }
+    }
+  }
+  &.toolbar {
+    &.active {
+      &>a i {
+        opacity: 0;
+      }
+    }
+    padding: 0;
+    ul {
+      display: flex;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      li {
+        flex: 1;
+        display: inline-block;
+        margin: 0;
+        transition: none;
+        a {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          box-shadow: none;
+          color: #fff;
+          line-height: 64px;
+          z-index: 1;
+          i {
+            line-height: inherit;
+          }
+        }
       }
     }
   }
@@ -130,8 +192,7 @@ button.btn-floating {
   bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
-  z-index: 998;
-
+  z-index: 997;
   ul {
     left: 0;
     right: 0;
@@ -140,14 +201,23 @@ button.btn-floating {
     bottom: 64px;
     margin: 0;
     visibility: hidden;
-
     li {
       margin-bottom: 15px;
     }
-
     a.btn-floating {
       opacity: 0;
     }
+  }
+  .fab-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: $button-floating-size;
+    height: $button-floating-size;
+    background-color: transparent;
+    border-radius: 0px;
+    transform: scale(0);
   }
 }
 
