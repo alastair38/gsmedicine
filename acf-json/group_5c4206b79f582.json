@@ -1,0 +1,50 @@
+{
+    "key": "group_5c4206b79f582",
+    "title": "Display Contact Details",
+    "fields": [
+        {
+            "key": "field_5c4206dc0d6d0",
+            "label": "Select Yes or No",
+            "name": "show_contact",
+            "type": "true_false",
+            "instructions": "If this is set to \"Yes\" a contact box will display under the main content of the page you are currently editing.  The contact name, phone and email details are taken from the \"Organisation Details\" admin page and can be updated there if necessary.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-about.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547835540
+}

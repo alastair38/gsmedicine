@@ -22,3 +22,11 @@
 	</section> <!-- end section -->
 
 </article> <!-- end article -->
+
+<?php
+
+$show = get_field('show_contact');
+if($show == '1') {
+    get_template_part( 'parts/content', 'contact' );
+}
+?>

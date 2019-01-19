@@ -85,7 +85,7 @@
 			endwhile; // end item_details loop
 
 		} else {
-			get_template_part( 'parts/content', 'missing' );
+			//get_template_part( 'parts/content', 'missing' );
 		}; // end item_details conditional ?>
 
 		</div> <!-- end row container -->
