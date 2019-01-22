@@ -16,77 +16,87 @@
 
 	 <div class="row container">
 
-		 <?php the_content();
+		 <?php $content = get_field('add_message');
+
+	if ($content == '1') {
+		echo '<div class="col s12">
+		' . get_field('message_content') . '
+		</div>';
+	}
+
+	if (have_rows('new_section')) { //parent repeater
+
+	while (have_rows('new_section')) : the_row();
+
+	echo '<h2 class="h4 col s12">' . get_sub_field('section_title') . '</h2><section class="col s12">';
 
 			if (have_rows('items_details')) { //parent repeater
 
 			while (have_rows('items_details')) : the_row();
-			$image = get_sub_field('item_photo');
-			$title = get_sub_field('item_title');
-			$alt = $image['alt'];
-			if(!$alt) {
-				$alt = 'Photograph of ' . $title . ' ' . $name;
-			}
+			echo '<div style="border: 1px solid gainsboro; border-radius: 3px; padding: 1rem; margin-bottom: 1rem;">';
+			// $image = get_sub_field('item_photo');
+			// $title = get_sub_field('item_title');
+			// $alt = $image['alt'];
+			// if(!$alt) {
+			// 	$alt = 'Photograph of ' . $title . ' ' . $name;
+			// }
 			?>
 
-			<section class="col s6">
 
-				<div class="card grey darken-2">
 
-					<div class="card-content white-text">
 
-						<span class="card-title"><?php echo $title;?></span>
+			<?php echo get_sub_field('item_description');?>
 
-						<p><?php echo get_sub_field('item_description');?></p>
 
-						<div class="card-action" style="padding: 1rem 0;">
 
 							<?php
-							if( have_rows('item_link') ):
+							if( get_sub_field('item_link') ):
 
 							// loop through rows (sub repeater)
-							while( have_rows('item_link') ): the_row();
 
 								// display each item as a list - with a class of completed ( if completed )
 							?>
 
-							<a href="<?php echo get_sub_field('link');?>">Find out more</a>
+							<a class="btn-flat grey lighten-3" href="<?php echo get_sub_field('item_link');?>">Find out more</a>
 
-							<?php endwhile; ?>
+
 
 							<?php endif; //if( get_sub_field('items') ): ?>
 
 							<?php
 
 							if( have_rows('file_upload') ):
-
+							echo '<strong> Related Files: </strong>';
 							// loop through rows (sub repeater)
 							while( have_rows('file_upload') ): the_row();
-
+							$file = get_sub_field('file');
 							// display each item as a list - with a class of completed ( if completed )
 							?>
 
-							<a href="<?php echo get_sub_field('file');?>">Download File</a>
+							<a class="btn-flat grey lighten-3" href="<?php echo $file['url'];?>"><?php echo $file['filename'];?></a>
 
 							<?php endwhile; ?>
 
 							<?php endif; //if( get_sub_field('items') ): ?>
 
-						</div> <!-- end .card-action -->
 
-					</div> <!-- end .card-content -->
 
-				</div> <!-- end .card -->
 
-			</section> <!-- end .col .s6 -->
 
 			<?php
-
+echo '</div>';
 			endwhile; // end item_details loop
 
 		} else {
 			//get_template_part( 'parts/content', 'missing' );
-		}; // end item_details conditional ?>
+		}; // end item_details conditional
+
+echo 	'</section>'; // section
+	endwhile; // end new_section loop
+
+} else {
+	//get_template_part( 'parts/content', 'missing' );
+}; // end new_section conditional  ?>
 
 		</div> <!-- end row container -->
 

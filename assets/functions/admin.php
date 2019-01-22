@@ -259,10 +259,24 @@ add_action('admin_head', 'my_admin_style');
 
 function my_admin_style() {
   echo '<style>
-    .academy-details {
-      background: teal;
-      color: white;
+    .acf-field-message {
+      background: #f1f1f1;
     }
+		.acf-field-message .acf-label {
+			font-size: 1rem;
+			display: inline-block;
+			background: teal;
+			color: white;
+			padding: 5px;
+			border-radius: 3px;
+		}
+		.acf-repeater .acf-row-handle.order span {
+			background: #222;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+		}
   </style>';
 }
 

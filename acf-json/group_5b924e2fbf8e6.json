@@ -1,0 +1,271 @@
+{
+    "key": "group_5b924e2fbf8e6",
+    "title": "Teaching Materials Content Blocks",
+    "fields": [
+        {
+            "key": "field_5c459b234a4ac",
+            "label": "Getting Started",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "grey lighten-3",
+                "id": ""
+            },
+            "message": "This page is divided in to 'Sections' for different types of teaching material. Each Section contains related content items, so you might have one section for 'Books' and another one for 'Academic papers'.  You create a new section by clicking on the 'Add Page Section' button.  \r\n\r\nOnce you have added a new section, give it a title and then you can start adding items. You create a new item by clicking on the 'Add Section Item' button and you should add a new item for each book, paper etc.  For every item there is the option to add a link to an external website (for more information) or to upload multiple files (such as PDFs) for download by website visitors.\r\n\r\nOnce a section has been created, you can return to it and add as many items as you wish. These items can also be rearranged by dragging them up \/ down the list.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5c45a507ec96d",
+            "label": "Add message",
+            "name": "add_message",
+            "type": "true_false",
+            "instructions": "Add a general message that will appear at the top of the page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c45a52eec96e",
+            "label": "Message content",
+            "name": "message_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c45a507ec96d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c458c9448fdc",
+            "label": "Section",
+            "name": "new_section",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5c458caa48fdd",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Page Section",
+            "sub_fields": [
+                {
+                    "key": "field_5c458caa48fdd",
+                    "label": "Title of this section",
+                    "name": "section_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c458a4387f49",
+                    "label": "Section Items",
+                    "name": "items_details",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_5c458a6a87f4a",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Section Item",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c458a6a87f4a",
+                            "label": "Item description",
+                            "name": "item_description",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5c458abf87f4b",
+                            "label": "More information options",
+                            "name": "more_info",
+                            "type": "button_group",
+                            "instructions": "If you wish to provide access to more information please choose one of these options, either to link to an external web page or upload support documents (these can be in PDF, Word, PPT)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Link to external site": "Link to external site",
+                                "Upload file": "Upload file"
+                            },
+                            "allow_null": 1,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5c458b1987f4c",
+                            "label": "External Link",
+                            "name": "item_link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5c458abf87f4b",
+                                        "operator": "==",
+                                        "value": "Link to external site"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5c458b2387f4d",
+                            "label": "File to upload",
+                            "name": "file_upload",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5c458abf87f4b",
+                                        "operator": "==",
+                                        "value": "Upload file"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add file",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c458b7f87f4f",
+                                    "label": "File",
+                                    "name": "file",
+                                    "type": "file",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-teaching-materials.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1548068420
+}
